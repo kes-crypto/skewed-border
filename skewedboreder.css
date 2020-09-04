@@ -1,0 +1,116 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060c21;
+}
+.wrap{
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+    grid-gap: 0 40px;
+}
+h1{
+    position: absolute;
+    font-size: 10em;
+    top: -20px;
+    right: 70px;
+    padding: 0;
+    margin: 0;
+    color: rgba(255, 255, 255, .03);
+    transition: .5s;
+}
+.over:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: white;
+    transform: skew(2deg,2deg);
+    z-index: -1;   
+}
+.over:nth-child(1):before{
+    background: linear-gradient(315deg,#ff0057, #e64a19);
+}
+.over:nth-child(2):before{
+    background: linear-gradient(315deg,#00ff0d, #1986e6);
+}
+.over:nth-child(3):before{
+    background: linear-gradient(315deg,#ff0057, #e619dc);
+}
+.over:nth-child(4):before{
+    background: linear-gradient(315deg,#ffe600, #19b6e6);
+}
+.over:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+.over{
+    position: relative;
+    height: 400px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px #000;
+}
+.border{
+    position: relative;
+    padding: 20px;
+}
+h1:hover{
+    top: -70px;
+    transition: .3s;
+}
+h2{
+    margin: 0 0 10px;
+    font-size: 24px;
+    padding: 0;
+    color: white;
+    font-weight: 500;
+}
+.over .border p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 15px;
+
+}
+.over .border a{
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    display: inline-block;
+    color: white;
+    transition: .5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+.over:hover .border a{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+   
+}
+.over .border a:hover{
+    background-color: white;
+    color: #060c21;
+}
